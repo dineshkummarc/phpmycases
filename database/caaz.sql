@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2018 at 03:32 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Generation Time: Feb 07, 2021 at 04:37 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -43,7 +42,8 @@ CREATE TABLE `cases` (
 INSERT INTO `cases` (`id`, `employee_id`, `severity`, `notes`, `case_num`) VALUES
 (2, '1029482', 'Critical', '<p>stole company property</p>', '201809111431489832'),
 (3, '1029482', 'Critical', '<p>stole company property</p>', '20180911143244.2511'),
-(4, '1029482', 'Critical', '<p>stole company property</p>', '20180911143429.2461');
+(4, '1029482', 'Critical', '<p>stole company property</p>', '20180911143429.2461'),
+(5, '1038492', 'Danger', '<p>This is a very Dangerous person, fought with other driver and customer</p>', '20210201144749.2869');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,8 @@ CREATE TABLE `employees` (
 INSERT INTO `employees` (`id`, `employee_id`, `name`, `surname`, `phone`, `email`, `gender`, `joined`, `tmp`) VALUES
 (4, '1938203', 'arnold', 'maruba', '263773891093', 'arnold.maruba@gmail.com', 'M', ' 10 Sep 2018 ', '5267'),
 (5, '1029482', 'partmore', 'kapingura', '263712394859', 'teko@gmail.com', 'M', ' 10 Sep 2018 ', '6954'),
-(6, '1038492', 'samuel', 'makota', '263775011617', 'sam.strover@yahoo.com', 'M', ' 10 Sep 2018 ', '7731');
+(6, '1038492', 'samuel', 'makota', '263775011617', 'sam.strover@yahoo.com', 'M', ' 10 Sep 2018 ', '7731'),
+(7, '9984573', 'dinesh', 'kumar', '263773452120', 'admin@example.com', 'M', ' 07 Feb 2021 ', '9758');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `username`, `password`, `joined`, `type`, `permission`, `gender`, `phone`) VALUES
-(7, 'Thomas', 'Dhobha', 'thomas.dhobha@gmail.com', 'thomas', '827ccb0eea8a706c4c34a16891f84e7b', ' 09 Sep 2018 ', 'user', '1', 'M', '263774123998');
+(7, 'Thomas', 'Dhobha', 'thomas.dhobha@gmail.com', 'thomas', '827ccb0eea8a706c4c34a16891f84e7b', ' 09 Sep 2018 ', 'user', '1', 'M', '263774123998'),
+(8, 'Admin', 'Administrator', 'admin@gmail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', ' 09 Sep 2018 ', 'user', '1', 'M', '263774123998');
 
 --
 -- Indexes for dumped tables
@@ -157,13 +159,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cases`
 --
 ALTER TABLE `cases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `picture`
@@ -175,7 +177,7 @@ ALTER TABLE `picture`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
